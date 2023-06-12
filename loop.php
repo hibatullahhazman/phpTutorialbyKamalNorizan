@@ -24,9 +24,16 @@
     ?>
     <h1>for</h1>
     <?php
-        $colors = ['red','green','blue'];
+        $colors = ['red','green','blue','yellow','pink','purple','orange','black','white','gray'];
         for($k=0;$k< sizeof($colors) ;$k++){
+            // if($k==1){
+            //     break;
+            // }
+            if($k==2){
+                continue;
+            }
             echo $colors[$k].'<br>';
+            
         }
         echo $k;
     ?>
