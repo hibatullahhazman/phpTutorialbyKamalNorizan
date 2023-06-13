@@ -1,11 +1,11 @@
 <?php
 
 class Car {
-    public $brand='proton';
-    public $color='black';
-    public $seats='6';
-    public $price='80000';
-    public $cc='1500';
+    private $brand='proton';
+    private $color='black';
+    private $seats='6';
+    private $price='80000';
+    private $cc='1500';
 
     function set_brand($brand) {
         $this->brand = $brand;
@@ -22,17 +22,47 @@ class Car {
     function set_cc($cc) {
         $this->cc = $cc;
     }
+
+    function get_brand() {
+        return $this->brand;
+    }
+    function get_color() {
+        return $this->color;
+    }
+    function get_seats() {
+        return $this->seats;
+    }
+    function get_price() {
+        return $this->price;
+    }
+    function get_cc() {
+        return $this->cc;
+    }
 }
 
-    $honda = new Car();
-    $honda->set_brand("Honda");
-    $honda->set_color('Red');
-    $honda->set_seats('4');
-    $honda->set_price('1000000');
-    $honda->set_cc('1500');
+    // $honda = new Car();
+    // $honda->brand="Honda";
+    // $honda->color='Red';
+    // $honda->seats='4';
+    // $honda->price='1000000';
+    // $honda->cc='1500';
     
-    echo $honda->brand.'<br>';
-    echo $honda->color.'<br>';
-    echo $honda->seats.'<br>';
-    echo $honda->price.'<br>';
+    
+    $produa = new Car();
+    $produa->set_brand("Produa");
+    $produa->set_color('purple');
+    $produa->set_seats('5');
+    $produa->set_price('83000');
+    $produa->set_cc('1500');
+    
+    echo $produa->get_brand().'<br>';
+    echo $produa->get_color().'<br>';
+    echo $produa->get_seats().'<br>';
+    echo $produa->get_price().'<br>';
+
+    // echo $honda->brand.'<br>';
+    // echo $honda->color.'<br>';
+    // echo $honda->seats.'<br>';
+    // echo $honda->price.'<br>';
+
 ?>
