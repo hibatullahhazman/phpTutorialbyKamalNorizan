@@ -1,11 +1,11 @@
 <?php
 
 class Car {
-    public $brand;
-    public $color;
-    public $seats;
-    public $price;
-    public $cc;
+    public $brand='proton';
+    public $color='black';
+    public $seats='6';
+    public $price='80000';
+    public $cc='1500';
 
     function set_brand($brand) {
         $this->brand = $brand;
@@ -30,6 +30,9 @@ class Car {
     $honda->set_seats('4');
     $honda->set_price('1000000');
     $honda->set_cc('1500');
-
-    var_dump($honda);
+    
+    echo $honda->brand.'<br>';
+    echo $honda->color.'<br>';
+    echo $honda->seats.'<br>';
+    echo $honda->price.'<br>';
 ?>
