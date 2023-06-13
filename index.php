@@ -31,6 +31,14 @@
       <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <h1>
+                    Users
+                    <button type="button" class="btn btn-primary btn-sm float-right mt-3" data-toggle="modal" data-target="#modelId">
+                        Add new User
+                    </button>
+                </h1>
+            </div>
+            <div class="col-md-12">
                 <table class="table">
                     <thead>
                         <tr>
@@ -41,17 +49,63 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php while($row = $users->fetch_assoc()){ ?>
                         <tr>
-                            <td></td> 
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><?php echo $row['name']; ?></td> 
+                            <td><?php echo $row['email']; ?></td> 
+                            <td><?php echo $row['phoneNumber']; ?></td> 
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
       </div>
-
+       
+    
+       <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register New User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <form action="createUser.php">
+                    <div class="modal-body">
+                        <div class="form-group">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" name="name" id="name" aria-describedby="helpUser" placeholder="Please enter you name" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" aria-describedby="helpUser" placeholder="Please enter you email address" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phoneNumber">phoneNumber</label>
+                                    <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" aria-describedby="helpUser" placeholder="Please enter you phone number" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="password" class="form-control" name="password" id="password" aria-describedby="helpUser" placeholder="Please enter you password address" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+       </div>                     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
