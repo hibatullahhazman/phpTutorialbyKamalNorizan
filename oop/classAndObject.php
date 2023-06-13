@@ -15,6 +15,13 @@ class Car {
         $this->cc = $cc;
     }
 
+    function __destruct() {
+        echo $this->brand.'<br>';
+        echo $this->color.'<br>';
+        echo $this->seats.'<br>';
+        echo $this->price.'<br>';
+    }
+
     // function set_brand($brand) {
     //     $this->brand = $brand;
     // }
@@ -58,11 +65,10 @@ class Car {
     
     $produa = new Car('Produa','purple','5','83000','1500');
     
+    $toyota = new Car('Toyota','blue','5','98000','2000');
     
-    echo $produa->brand.'<br>';
-    echo $produa->color.'<br>';
-    echo $produa->seats.'<br>';
-    echo $produa->price.'<br>';
+    
+    
 
     // echo $honda->brand.'<br>';
     // echo $honda->color.'<br>';
