@@ -36,9 +36,10 @@
     <?php
         $ages = array('Hiba'=>32, 'Jannah'=>34, 'Azrul'=>37, 'Huda'=>27);
 
-        foreach($ages as $name=>$age){
-            echo $name.'-'.$age.'<br>';
-        }
+        echo $ages['Hiba'].'<br>';
+        // foreach($ages as $name=>$age){
+        //     echo $name.'-'.$age.'<br>';
+        // }
     ?>
 </body>
 </html>
