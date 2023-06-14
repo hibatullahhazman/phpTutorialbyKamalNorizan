@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include 'connection.php';
+    include 'encryption.php';
 
     $sql = 'Select * from users';
     $users = $conn->query($sql);
@@ -60,6 +61,10 @@
                             <td><?php echo $row['name']; ?></td> 
                             <td><?php echo $row['email']; ?></td> 
                             <td><?php echo $row['phoneNumber']; ?></td> 
+                            <td>
+                                <a href="editUser.php?id=<?php echo encrypt($row['id'],'SecretKey'); ?>" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="deleteUser.php?id=<?php echo encrypt($row['id'],'SecretKey'); ?>" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
                         </tr>
                         <?php } ?>
                     </tbody>
