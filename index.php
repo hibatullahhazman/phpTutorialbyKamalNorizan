@@ -86,19 +86,19 @@
                     <div class="modal-body">
                         <div class="form-group">
                           <label for="name">Name</label>
-                          <input type="text" class="form-control" name="name" id="name" aria-describedby="helpUser" placeholder="Please enter you name" required>
+                          <input type="text" class="form-control" name="name" id="name"  aria-describedby="helpUser" placeholder="Please enter you name" required>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" aria-describedby="helpUser" placeholder="Please enter you email address" required>
+                                    <input type="email" class="form-control" name="email"  id="email" aria-describedby="helpUser" placeholder="Please enter you email address" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="phoneNumber">phoneNumber</label>
-                                    <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" aria-describedby="helpUser" placeholder="Please enter you phone number" required>
+                                    <input type="text" class="form-control" name="phoneNumber"  id="phoneNumber" aria-describedby="helpUser" placeholder="Please enter you phone number" required>
                                 </div>
                             </div>
                         </div>
