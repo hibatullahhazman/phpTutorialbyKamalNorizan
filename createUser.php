@@ -16,7 +16,7 @@
     $sql = "INSERT INTO users (name, email, phoneNumber, password) VALUES ('$name', '$email', '$phoneNumber', '$passwordHash')";
     session_start();
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['flash_message'] = ['msg'=>'Please fill all fields','alert'=>'alert-success'];
+        $_SESSION['flash_message'] = ['msg'=>'Recorded successfully','alert'=>'alert-success'];
     } else {
         $_SESSION['flash_message'] = ['msg'=>"Error: " . $sql . "<br>" . $conn->error,'alert'=>'alert-danger'];
     }

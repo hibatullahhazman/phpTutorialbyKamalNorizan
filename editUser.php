@@ -1,10 +1,11 @@
 <?php
     include_once('connection.php');
     include_once('encryption.php');
+    $key='SecretKey';
+    $data=$_GET['id'];
 
-    $id = $_GET['id'];
 
-    $id = decrypt($id,'SecretKey');
+    $id = decrypt($data,'SecretKey');
 
     // echo $id;
 
@@ -47,6 +48,9 @@
                 </h1>
             </div>
             <div class="col-md-12">
+                
+                <input type="hidden" name="user_id" id="user_id" class="form-control" value="<?php echo $row['id'] ?? ''; ?>">
+                
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" value="<?php echo $row['name'] ?? ''; ?>" class="form-control" name="name" id="name" aria-describedby="helpUser" placeholder="Please enter you name" required>
