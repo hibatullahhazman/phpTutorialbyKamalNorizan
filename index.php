@@ -41,8 +41,8 @@
             </div>
             <div class="col-md-12">
                 <?php if(isset($_SESSION['flash_message'])){ ?>
-                    <div class="alert alert-success" role="alert">
-                        <?php echo $_SESSION['flash_message']; ?>
+                    <div class="alert <?php echo $_SESSION['flash_message']['alert']; ?>" role="alert">
+                        <?php echo $_SESSION['flash_message']['msg']; ?>
                     </div>
                 <?php } ?>
                 <table class="table">
